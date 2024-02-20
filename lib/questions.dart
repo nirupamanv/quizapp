@@ -12,27 +12,29 @@ class _QuestionsState extends State<Questions> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Expanded(child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Center(
-              child:  Text('Google was originally called "Backrub"',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.white,
-
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+          Text('Google was originally called "Backrub"',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.white,
             ),
-          ))
-          ),
-          ),
-          TextButton(onPressed:(){}, child: Text('True')),
-          TextButton(onPressed: (){}, child: Text('False')),
-        ],
-      ),
+        ),
+           TextButton(onPressed :(){},
+               style:TextButton.styleFrom(backgroundColor: Colors.green),
+               child: Text('True')),
+            SizedBox(height: 30),
+            TextButton(onPressed: (){},
+                style: TextButton.styleFrom(backgroundColor: Colors.red),
+                child: Text('False'))
 
-    );
+          ],
+            ),
+      ),
+          );
+
   }
 }
 
