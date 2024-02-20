@@ -24,7 +24,7 @@ class _QuestionsState extends State<Questions> {
         ),
            TextButton(onPressed :(){},
                style:TextButton.styleFrom(backgroundColor: Colors.green),
-               child: Text('True')),
+               child: Text('Truee')),
             SizedBox(height: 30),
             TextButton(onPressed: (){},
                 style: TextButton.styleFrom(backgroundColor: Colors.red),
