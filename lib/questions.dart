@@ -42,7 +42,7 @@ class _QuestionsState extends State<Questions> {
 
   List myList = [
     Quiz(qus:'In school Albert Einstein failed most of the subjects except for physics and math',ans:true),
-    Quiz(qus:'The first song ever sung in the space was “Happy Birthday.”', ans:true),
+    Quiz(qus:'The first song ever sung in the space was “Happy Birthday..”', ans:true),
     Quiz(qus:'The first country in the world to use postcards was the United States of America.”',ans:false),
     Quiz(qus:'A male canary tends to have a better singing voice than a female canary..”',ans: true),
     Quiz(qus:'Tea contains more caffeine than coffee and soda.”',ans: false),
