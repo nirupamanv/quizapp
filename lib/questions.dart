@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/qn.dart';
 
 class Questions extends StatefulWidget {
   const Questions({Key? key}) : super(key: key);
@@ -16,25 +17,42 @@ class _QuestionsState extends State<Questions> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-          Text('Google was originally called "Backrub"',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
+            Text(myList[index].qus,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+              ),
             ),
-        ),
-           TextButton(onPressed :(){},
-               style:TextButton.styleFrom(backgroundColor: Colors.green),
-               child: Text('Truee')),
+            TextButton(onPressed: () {setState((){});
+              nextquestion();},
+                style: TextButton.styleFrom(backgroundColor: Colors.green,),
+                child: Text('Truee')),
             SizedBox(height: 30),
-            TextButton(onPressed: (){},
+            TextButton(onPressed: () {setState((){});
+              nextquestion();
+              },
                 style: TextButton.styleFrom(backgroundColor: Colors.red),
                 child: Text('False'))
 
           ],
-            ),
+        ),
       ),
-          );
+    );
+  }
 
+  List myList = [
+    Quiz(qus:'In school Albert Einstein failed most of the subjects except for physics and math',ans:true),
+    Quiz(qus:'The first song ever sung in the space was “Happy Birthday.”', ans:true),
+    Quiz(qus:'The first country in the world to use postcards was the United States of America.”',ans:false),
+    Quiz(qus:'A male canary tends to have a better singing voice than a female canary..”',ans: true),
+    Quiz(qus:'Tea contains more caffeine than coffee and soda.”',ans: false),
+  ];
+  int index=0;
+  void nextquestion(){
+    if(index<myList.length){
+    index++;
   }
 }
+}
+
 
